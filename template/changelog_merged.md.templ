@@ -1,0 +1,2 @@
+<% _.forEach(commits, function(commit) { %><% if(!_.isEmpty(commit.projectId)) { %>* [<%- commit.projectId %>-<%- commit.ticket.id %>] <%- commit.ticket.message %><% _.forEach(commit.pullRequests, function(pullRequest) { %> [PR#<%- pullRequest.pullRequestId %>](https://bitbucket.org/est-rouge/edsdk-service/pull-requests/<%- pullRequest.pullRequestId %>)<% }); %>
+<% } %><% }); %>
